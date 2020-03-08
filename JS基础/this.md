@@ -40,23 +40,37 @@ fn2()
 function Foo(){
     this.name='kkk';
     this.year=2019;
-    console.log(this);//window
-    console.log(this.year)//2019
+    console.log(this);
+    console.log(this.year)
 }
 Foo()
+
+
+
+
+
+//window
+//2019
 ```
 
 ```js
 function Foo(){
     this.name='kkk';
     this.year=2019;
-    console.log(this);  //Foo{name:'kkk',year:2019}
-    console.log(this.year)//2019
+    console.log(this);  
+    console.log(this.year)
 }
 var a=new Foo();
-console.log(a.name)//'kkk'
-console.log(a.year)//2019
+console.log(a.name)
+console.log(a.year)
 
+
+
+
+//  console.log(this);  //Foo{name:'kkk',year:2019}
+// console.log(this.year)//2019
+// console.log(a.name)//'kkk'
+// console.log(a.year)//2019
 ```
 
 ### 直接调用构造函数的this与new的对象的this不一样
@@ -70,6 +84,12 @@ var obj={
 }
 
 obj.fn();
+
+
+
+
+
+
 //{ x: 10, fn: [Function: fn] }
 //10
 ```
@@ -86,6 +106,10 @@ var obj={
 
 f=obj.fn;
 f();
+
+
+
+
 //window
 //undefined
 
@@ -106,11 +130,21 @@ var girl={
     height:160,
     weight:180,
     detail:function(){
-        console.log('姓名'+this.name); //小红
-        console.log('身高'+this.height) //160
+        console.log('姓名'+this.name);
+        console.log('身高'+this.height) 
     }
 }
 girl.detail()
+
+
+
+
+
+// console.log('姓名'+this.name); //小红
+//         console.log('身高'+this.height) //160
+
+
+
 
 // 硬绑定
 var girlName={
@@ -125,15 +159,27 @@ var girl1={
 var girl2={
     name:"小黄"
 }
-girlName.sayName.call(girl1);  //小白
-girlName.sayName.call(girl2);  //小黄
+girlName.sayName.call(girl1);  
+girlName.sayName.call(girl2);  
+
+
+
+
+
+
+// girlName.sayName.call(girl1);  //小白
+// girlName.sayName.call(girl2);  //小黄
+
+
+
+
 
 
 //构造函数绑定
 function Love(name){
     this.name=name;
     this.sayName=function(){
-        console.log('我的老婆是'+this.name);  //小红
+        console.log('我的老婆是'+this.name); 
     };
 }
 
@@ -145,16 +191,25 @@ xiaoHong.sayName();
 
 function a(){
     function b(){
-        console.log(this);  //window
+        console.log(this);
         function c(){
             "use strict";
-            console.log(this);  //undefined
+            console.log(this); 
         }
         c();
     }
     b();
 }
 a();
+
+
+
+// console.log('我的老婆是'+this.name);  //小红
+// console.log(this);  //window
+// console.log(this);  //undefined
+
+
+
 
 
 var name='小白';
@@ -175,10 +230,17 @@ var girl ={
     }
     special:special
 }
-girl.detail();   //小红
-girl.woman.detail();     //小黄
-girl.special();    //小红
+girl.detail();   
+girl.woman.detail();    
+girl.special();    
 
+
+
+
+
+// girl.detail();   //小红
+// girl.woman.detail();     //小黄
+// girl.special();    //小红
 ```
 
 ```js
@@ -204,11 +266,22 @@ var b={
 var c=b.detail;
 b.a=a;
 var e=b.bibi();
-a();   //小红
-c();   //小红
-b.a();  //小黄
-d(b.detail);  //小红
-e();  //小红
+a();   
+c();   
+b.a(); 
+d(b.detail); 
+e();  
+
+
+
+
+
+// a();   //小红
+// c();   //小红
+// b.a();  //小黄
+// d(b.detail);  //小红
+// e();  //小红
+
 
 ```
 
@@ -219,7 +292,7 @@ var myObject = {
     add: function() {
         this.num = 3;
         (function() {
-            console.log(this.num); //默认绑定  指向的window   输出1
+            console.log(this.num);
             this.num = 4;
         })();
         console.log(this.num);   
@@ -228,9 +301,19 @@ var myObject = {
         console.log(this.num)
     }
 }
+myObject.add();      
+console.log(myObject.num);
+console.log(num);
+var sub = myObject.sub;
+sub();  
+
+
+
+
+
+console.log(this.num); //默认绑定  指向的window   输出1
 myObject.add();         //undefined 3
 console.log(myObject.num);  //3
 console.log(num);  //1
-var sub = myObject.sub;
 sub();  //4
 ```
