@@ -220,35 +220,3 @@ document
 3. 标准事件模型中event.target表示发生移入/出的元素,**vent.relatedTarget**对应移出/如元素；在老IE中event.srcElement表示发生移入/出的元素，**event.toElement**表示移出的目标元素，**event.fromElement**表示移入时的来源元素
 
 
-
-### IE 的事件处理和 W3C 的事件处理有哪些区别？
-
-绑定事件
-
- - W3C: targetEl.addEventListener('click', handler, false);
- - IE: targetEl.attachEvent('onclick', handler);
-
-删除事件
-
- - W3C: targetEl.removeEventListener('click', handler, false);
- - IE: targetEl.detachEvent(event, handler);
-
-事件对象
-
- - W3C: var e = arguments.callee.caller.arguments[0]
- - IE: window.event
-
-事件目标
-
- - W3C: e.target
- - IE: window.event.srcElement
-
-阻止事件默认行为
-
- - W3C: e.preventDefault()
- - IE: window.event.returnValue = false'
-
-阻止事件传播
-
- - W3C: e.stopPropagation()
- - IE: window.event.cancelBubble = true
