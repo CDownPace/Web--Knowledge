@@ -54,14 +54,13 @@ HTTP是Hyper Text Transfer Protocol（超文本传输协议）的缩写。它是
 
 
 ### Post 和 Get 的区别
-
- - GET在浏览器回退时是无害的，而POST会再次提交
- - Get请求能缓存，Post不能
- - Post相对Get相对安全一些，因为Get请求都包含在URL中，而且会被浏览器保存记录，Post不会。但是再抓包的情况下都是一样的。
- - Post 可以通过 request body来传输比 Get 更多的数据 
- - URL有长度限制，会影响 Get 请求，但是这个长度限制是浏览器规定的
- - Post 支持更多的编码类型且不对数据类型限制
- - POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok(返回数据)
+- get参数只能URL编码格式，post没有这种要求。
+- get参数放在url中，post参数放在request body中
+- get请求的url有长度限制，post没有
+- get的参数会放在历史记录里，而post不会
+- get没有post安全，因为参数直接暴露在url上
+- get回退时无害，而post回退时会再次提交请求
+- get会发送一次tcp请求，post会发送两次tcp请求
 
 
 先引入副作用和幂等的概念。
