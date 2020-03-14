@@ -30,22 +30,6 @@ httpRequest.send();
 
 完整的例子
 ```js
-// function ajax(url, cb) {
-//   let xhr;
-//   if(window.XMLHttpRequest) {
-//     xhr = new XMLHttpRequest();
-//   } else {
-//     xhr = ActiveXObject("Microsoft.XMLHTTP");
-//   }
-//   xhr.onreadystatechange = function() {
-//     if(xhr.readyState == 4 && xhr.status == 200) {
-//       cb(xhr.responseText);
-//     } 
-//   }
-//   xhr.open('GET', url, true);
-//   xhr.send();
-// }
-
 var xhr = new XMLHttpRequest()
 xhr.open('GET','http://127.0.0.1:3000',true)
 xhr.send()
