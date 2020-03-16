@@ -227,7 +227,7 @@ v-if(判断是否隐藏)、v-for(把数据遍历出来)、v-bind(绑定属性)�
 - state 里面存放的数据是响应式的，vue 组件从 store 读取数据，若是 store 中的数据发生改变，依赖这相数据的组件也会发生更新
 - 它通过 mapState 把全局的 state 和 getters 映射到当前组件的 computed 计算属性
 
-### vuex 的 getter 特性是什么
+### 15.vuex 的 getter 特性是什么
 
 - getter 可以对 state 进行计算操作，它就是 store 的计算属性
 - 虽然在组件内也可以做计算属性，但是 getters 可以在多给件之间复用
