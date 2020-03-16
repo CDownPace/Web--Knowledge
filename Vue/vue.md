@@ -221,7 +221,7 @@ v-if(判断是否隐藏)、v-for(把数据遍历出来)、v-bind(绑定属性)�
 
 有 5 种，分别是 state、getter、mutation、action、module
 
-### vuex 的 store 特性是什么
+### 14.vuex 的 store 特性是什么
 
 - vuex 就是一个仓库，仓库里放了很多对象。其中 state 就是数据源存放地，对应于一般 vue 对象里面的 data
 - state 里面存放的数据是响应式的，vue 组件从 store 读取数据，若是 store 中的数据发生改变，依赖这相数据的组件也会发生更新
