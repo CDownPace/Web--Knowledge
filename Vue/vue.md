@@ -1,9 +1,9 @@
-### v-bind和v-model的区别
+### 1.v-bind和v-model的区别
 
 1.v-bind用来绑定数据和属性以及表达式，缩写为'：'
 2.v-model使用在表单中，实现双向数据绑定的，在表单元素外使用不起作用
 
-### 什么是 mvvm？
+### 2.什么是 mvvm？
 
 MVVM 是 Model-View-ViewModel 的缩写。mvvm 是一种设计思想。Model 层代表数据模型，也可以在 Model 中定义数据修改和操作的业务逻辑；View 代表 UI 组件，它负责将数据模型转化成 UI 展现出来，ViewModel 是一个同步 View 和 Model 的对象。
 
@@ -11,18 +11,18 @@ MVVM 是 Model-View-ViewModel 的缩写。mvvm 是一种设计思想。Model 层
 
 ViewModel 通过双向数据绑定把 View 层和 Model 层连接了起来，而 View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作 DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。
 
-### mvvm 和 mvc 区别？
+### 3.mvvm 和 mvc 区别？
 
 mvc 和 mvvm 其实区别并不大。都是一种设计思想。主要就是 mvc 中 Controller 演变成 mvvm 中的 viewModel。mvvm 主要解决了 mvc 中大量的 DOM 操作使页面渲染性能降低，加载速度变慢，影响用户体验。和当 Model 频繁发生变化，开发者需要主动更新到 View 。
 
-### vue 的优点是什么？
+### 4.vue 的优点是什么？
 
 - 低耦合。视图（View）可以独立于 Model 变化和修改，一个 ViewModel 可以绑定到不同的"View"上，当 View 变化的时候 Model 可以不变，当 Model 变化的时候 View 也可以不变。
 - 可重用性。你可以把一些视图逻辑放在一个 ViewModel 里面，让很多 view 重用这段视图逻辑。
 - 独立开发。开发人员可以专注于业务逻辑和数据的开发（ViewModel），设计人员可以专注于页面设计，使用 Expression Blend 可以很容易设计界面并生成 xml 代码。
 - 可测试。界面素来是比较难于测试的，而现在测试可以针对 ViewModel 来写。
 
-### 请详细说下你对 vue 生命周期的理解？
+### 5.请详细说下你对 vue 生命周期的理解？
 
 答：总共分为 8 个阶段创建前/后，载入前/后，更新前/后，销毁前/后。
 
@@ -31,7 +31,7 @@ mvc 和 mvvm 其实区别并不大。都是一种设计思想。主要就是 mvc
 - 更新前/后：当 data 变化时，会触发 beforeUpdate 和 updated 方法。
 - 销毁前/后：在执行 destroy 方法后，对 data 的改变不会再触发周期函数，说明此时 vue 实例已经解除了事件监听以及和 dom 的绑定，但是 dom 结构依然存在
 
-### 组件之间的传值？
+### 6.组件之间的传值？
 
 1. 父组件与子组件传值
 
@@ -107,11 +107,7 @@ mvc 和 mvvm 其实区别并不大。都是一种设计思想。主要就是 mvc
 </script>
 ```
 
-### active-class 是哪个组件的属性？
-
-vue-router 模块的 router-link 组件。
-
-### 嵌套路由怎么定义？
+### 7.嵌套路由怎么定义？
 
 在实际项目中我们会碰到多层嵌套的组件组合而成，但是我们如何实现嵌套路由呢？因此我们需要在 VueRouter 的参数中使用 children 配置，这样就可以很好的实现路由嵌套。
 index.html，只有一个路由出口
@@ -159,12 +155,12 @@ new Vue({
 
 home.vue，点击显示就会将子路由显示在出来，子路由的出口必须在父路由里面，否则子路由无法显示。
 
-### 路由之间跳转？
+### 8.路由之间跳转？
 
 - 声明式（标签跳转） `<router-link :to="index">`
 - 编程式（ js 跳转） `router.push('index')`
 
-### 懒加载（按需加载路由）（常考）
+### 9.懒加载（按需加载路由）（常考）
 
 webpack 中提供了 require.ensure()来实现按需加载。以前引入路由是通过 import 这样的方式引入，改为 const 定义的方式进行引入。
 
@@ -180,7 +176,7 @@ import  home   from '../../common/home.vue'
 const  home = r => require.ensure( [], () => r (require('../../common/home.vue')))
 ```
 
-### vuex 是什么？怎么使用？哪种功能场景使用它？
+### 10.vuex 是什么？怎么使用？哪种功能场景使用它？
 
 vue 框架中状态管理。在 main.js 引入 store，注入。新建了一个目录 store，….. export 。场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车
 
@@ -198,7 +194,7 @@ import store from './store'
 ...
 ```
 
-### vue-router 有哪几种导航钩子?
+### 11.vue-router 有哪几种导航钩子?
 
 三种
 
