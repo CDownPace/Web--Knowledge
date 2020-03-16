@@ -217,7 +217,7 @@ v-if(判断是否隐藏)、v-for(把数据遍历出来)、v-bind(绑定属性)�
 
 ## vuex 相关
 
-### vuex 有哪几种属性
+### 13.vuex 有哪几种属性
 
 有 5 种，分别是 state、getter、mutation、action、module
 
