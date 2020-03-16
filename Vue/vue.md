@@ -233,18 +233,19 @@ v-if(判断是否隐藏)、v-for(把数据遍历出来)、v-bind(绑定属性)�
 - 虽然在组件内也可以做计算属性，但是 getters 可以在多给件之间复用
 - 如果一个状态只在一个组件内使用，是可以不用 getters
 
+
 ### vuex 的 mutation 特性是什么
 
 - action 类似于 muation, 不同在于：action 提交的是 mutation,而不是直接变更状态
 - action 可以包含任意异步操作
 
-### vue 中 ajax 请求代码应该写在组件的 methods 中还是 vuex 的 action 中
+### 16.vue 中 ajax 请求代码应该写在组件的 methods 中还是 vuex 的 action 中
 
 如果请求来的数据不是要被其他组件公用，仅仅在请求的组件内使用，就不需要放入 vuex 的 state 里
 
 如果被其他地方复用，请将请求放入 action 里，方便复用，并包装成 promise 返回
 
-### 不用 vuex 会带来什么问题
+### 17.不用 vuex 会带来什么问题
 
 - 可维护性会下降，你要修改数据，你得维护 3 个地方
 - 可读性下降，因为一个组件里的数据，你根本就看不出来是从哪里来的
