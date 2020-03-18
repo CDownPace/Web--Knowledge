@@ -273,7 +273,7 @@ axios 是请求后台资源的模块。 npm i axios -S
 * 使用函数劫持的方式，重写了数组的方法
 * Vue 将 data 中的数组，进行了原型链重写。指向了自己定义的数组原型方法，这样当调用数组api 时，可以通知依赖更新.如果数组中包含着引用类型。会对数组中的引用类型再次进行监控。
 
-## 为何Vue采用异步渲染?
+## 21.为何Vue采用异步渲染?
 因为如果不采用异步更新，那么每次更新数据都会对当前组件进行重新渲染.所以为了性能考虑。 Vue会在本轮数据更新后，再去异步更新视图!
 
 ## nextTick实现原理?
@@ -384,6 +384,7 @@ include / exclude ,2个生命周期 activated , deactivated LRU算法
 ### Vue3.0你知道有哪些改进?
 * Vue3 采用了TS来编写
 * 支持 Composition API Vue3 中响应式数据原理改成 proxy vdom 的对比算法更新，只* 更新 vdom 的绑定了动态数据的部分
+
 ### 实现hash路由和history路由
 * onhashchange #
 * history.pushState h5 api
