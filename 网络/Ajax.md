@@ -41,7 +41,7 @@ xhr.onreadystatechange=function(){
 ```
 
 ### httpRequest.readyState的值
-
+7
  - 0 (未初始化) or (请求还未初始化)
  - 1 (正在加载) or (已建立服务器链接)
  - 2 (加载成功) or (请求已接受)
