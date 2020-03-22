@@ -125,12 +125,12 @@ var LikedList = function(){
 
 
 
-var l = new LikedList
-l.append(1)
-l.append(2)
-l.append(3)
+// var l = new LikedList
+// l.append(1)
+// l.append(2)
+// l.append(3)
 
-l.insert(1,10)
+// l.insert(1,10)
 
 
 // var l=new LikedList
