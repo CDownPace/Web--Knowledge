@@ -403,3 +403,7 @@ include / exclude ,2个生命周期 activated , deactivated LRU算法
 ### 让css样式只在当前组件生效
 style 加上scoped
 >注：如果引入组件，那么就不会产生影响，需要sass样式穿透   父元素/deep/子元素 也可以用>>>
+
+### v-module
+数据双向绑定，v-module里的数据是value，主要用于标签，input标签，下拉菜单，单选多选等。
+在移动端click有300ms延迟的问题，解决这个问题可以引入fastClick
