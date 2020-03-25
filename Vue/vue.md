@@ -407,3 +407,6 @@ style 加上scoped
 ### v-module
 数据双向绑定，v-module里的数据是value，主要用于标签，input标签，下拉菜单，单选多选等。
 在移动端click有300ms延迟的问题，解决这个问题可以引入fastClick
+
+### loader
+文件加载器，打包以后会生成.html文件，通过loader来解析
