@@ -78,7 +78,7 @@
 浏览器端事件循环中的异步队列有两种：macro（宏任务）队列和 micro（微任务）队列。**宏任务队列可以有多个，微任务队列只有一个**。
 
 *   常见的 macro-task 比如：setTimeout、setInterval、script（整体代码）、 I/O 操作、UI 渲染等。
-*   常见的 micro-task 比如: new Promise().then(回调)、MutationObserver(html5新特性) 等。
+*   常见的 micro-task 比如: new Promise().then(回调)、process.nextTick、MutationObserver(html5新特性) 等。
 
 ### 2.Event Loop 过程解析
 
