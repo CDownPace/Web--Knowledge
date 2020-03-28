@@ -291,7 +291,7 @@ Node端事件循环中的异步队列也是这两种：macro（宏任务）队�
 ![](https://camo.githubusercontent.com/71b607cd363565c5d61299d31d9fd72b889de645/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f312f31322f313638343162616431636461373431663f773d3130353126683d33343426663d706e6726733d3932363835)
 
 接下我们通过一个例子来说明两者区别：
-
+```js
     setTimeout(()=>{
         console.log('timer1')
         Promise.resolve().then(function() {
@@ -305,7 +305,7 @@ Node端事件循环中的异步队列也是这两种：macro（宏任务）队�
         })
     }, 0)
     
-
+```
 浏览器端运行结果：`timer1=>promise1=>timer2=>promise2`
 
 浏览器端的处理过程如下：
