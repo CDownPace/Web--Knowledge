@@ -78,36 +78,3 @@
 !important > 行内样式 > ID选择器 > (类选择器 | 属性选择器 | 伪类选择器 ) > 标签选择器 >通配符
 
 
-
-### 浏览器解析CSS
-`.wrapper div > p`  CSS中，浏览器查找元素是通过选择权从后往前找的， 这样做的目的是加快CSS解析速度，从后往前，排除法
-
-[浏览器解析css选择器的规则](https://blog.csdn.net/qq_21397815/article/details/72874932)
-
-
-
-### 怎样美化一个checkbox ?
- - 让原本的勾选框隐藏
- - `input + label` 背景图没选中
- - `input:checked + label` 背景图选中
-
-```css
-.checkbox input{
-  display: none;
-}
-.checkbox input + label{
-  background:url(./没选中.png) left center no-repeat;
-  background-size:20px 20px;
-  padding-left:20px;
-}
-.checkbox input:checked + label{
-  background-image:url(./选中.png);
-}
-```
-```html
-<div class="checkbox">
-  <input type="checkbox" id="handsome"/>
-  <label for="handsome">我很帅</label>
-</div>
-```
-

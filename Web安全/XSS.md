@@ -5,7 +5,11 @@ XSS ( Cross Site Scripting ) 是指恶意攻击者利用网站没有对用户提
 
 从而盗取用户资料、利用用户身份进行某种动作或者对访问者进行病毒侵害的一种攻击方式。
 
-## XSS攻击的危害包括：
+## 解决方案
+* 在网页内容输入的时候做转义，
+* node.js中通过escape库简单搞定
+
+<!-- ## XSS攻击的危害包括：
 
 1. 获取页面数据
 2. 获取cookie
@@ -58,7 +62,7 @@ var data = "hello"; alert(1);"";
  - 富文本 -->
 
 
-## XSS 防御
+<!-- ## XSS 防御
 
 对于 XSS 攻击来说，通常有两种方式可以用来防御。
  - 转义字符
@@ -176,10 +180,10 @@ Content-Security-Policy: img-src https://*
 Content-Security-Policy: child-src 'none'
 ```
 
-[CSP](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP) ( Content Security Policy )
+[CSP](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP) ( Content Security Policy ) -->
 
 
-## XSS注入方法
+<!-- ## XSS注入方法
 参考链接：https://xz.aliyun.com/t/4067
 
 ### 利用link远程包含js文件
@@ -216,9 +220,9 @@ expression属性
 
 background属性
 
-    <table background=javascript:alert(1)></table> //在Opera 10.5和IE6上有效
+    <table background=javascript:alert(1)></table> //在Opera 10.5和IE6上有效 -->
 
-有过滤的情况下
+有过滤的情况下 -->
 =======
 
 过滤空格
