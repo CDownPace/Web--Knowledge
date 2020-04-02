@@ -65,20 +65,6 @@ JS 引擎则：解析和执行 javascript 来实现逻辑和控制 DOM 进行交
 
 
 
-### HTML5变化
- - [新的语义化元素](http://www.w3school.com.cn/html/html5_new_elements.asp)
-   - header footer nav main article  section
-   - 删除了一些纯样式的标签
- - [表单增强](http://caibaojian.com/html5/form.html)
- - 新API
-   - 离线 （applicationCache ）
-   - 音视频 （audio, vidio）
-   - 图形 （canvans）
-   - 实时通信（websoket）
-   - 本地存储（localStorage, indexDB）
-   - 设备能力（地图定位，手机摇一摇）
-
-
 
 ### em 与 i 的区别
  - 效果都是斜体
