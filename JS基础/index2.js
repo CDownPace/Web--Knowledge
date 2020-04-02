@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var a=1;
 console.log(1);
 setTimeout(function () {
@@ -17,10 +16,3 @@ function fun() {
 };
 console.log(6);
 console.log(fun());
-=======
-var b = 10;
-(function b() {
-  b = 20;
-  console.log(b)
-})()
->>>>>>> 9582fdf3798c5da69881bdced081bfd5d496ca61

@@ -71,3 +71,7 @@
     6. 浏览器**在Document对象上触发DOMContentLoaded事件**
     7. 此时文档完全解析完成，浏览器可能还在等待如图片等内容加载，等这些**内容完成载入并且所有异步脚本完成载入和执行**，document.readState变为complete,window触发load事件
 24. **显示页面**（HTML解析过程中会逐步显示页面）
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9582fdf3798c5da69881bdced081bfd5d496ca61
