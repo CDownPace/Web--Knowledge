@@ -11,6 +11,10 @@ function EntryNodeOfLoop(pHead)
     }
     let fast =pHead.next.next;
     let slow=pHead.next;
+    // 定义两个节点，第一个指向下一个，第二个指向下两个。如果两个能碰到就是环链表
+    // 确定碰到的地方，让第二个指回头部，第二个从头部出发，第一个从相遇处出发，再次碰到就是入口节点。
+
+
     while(fast&&slow){
         if(fast!=slow){
         fast=fast.next.next;
