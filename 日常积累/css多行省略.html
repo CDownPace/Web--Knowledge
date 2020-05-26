@@ -17,14 +17,40 @@
       /* 优点：简洁明了 缺点：私有属性 */
        height: 102px;
        overflow: hidden;
-       display: -webkit-box;
-       /* 设置盒子内排列的方向 */
-       -webkit-box-orient: vertical;
-       /* 垂直方向 */
-       -webkit-line-clamp: 5;
-       /* 能显示几行 */
-    }
+      
 
+       /* display: -webkit-box; */
+       /* 设置盒子内排列的方向 */
+       /* -webkit-box-orient: vertical; */
+       /* 垂直方向 */
+       /* -webkit-line-clamp: 5; */
+       /* 能显示几行 */
+
+     position: relative;
+     padding-right: 1em;
+     text-align: justify;
+
+    }
+    /* 第二种 */
+
+    p::before{
+      content: "...";
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    p::after{
+      content: "";
+      background: white;
+      width: 1em;
+      height: 1em;
+      /* 伪元素默认为行内元素 */
+      position: absolute;
+      display: inline;
+      right: 0;
+      margin-top: 0.5em;
+    }
     
   </style>
 </head>
