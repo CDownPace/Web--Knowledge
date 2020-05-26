@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 100%;
+      height: 102px;      
+      /* background-color: black; */
+      /* border: 1px; */
+
+    }
+    /* 优点“css规范  缺点：背景 */
+    p{
+       height: 102px;
+       overflow: hidden;
+     position: relative;
+     text-align: justify;
+    }
+    
+    p::after{
+      content: "";
+      position: absolute;
+      height: 1.2em;
+      width: 20%;
+      background: linear-gradient(to right, rgba(255,255,255,0),#ebe6e8 80%);
+      right: 0;
+      bottom: 0;
+      /* margin-bottom: 0.2em; */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+  <p>从前有座庙，庙里有个老和尚，老和尚给小和尚讲故事。
+    从前有座庙，庙里有个老和尚，老和尚给小和尚讲故事。
+    从前有座庙，庙里有个老和尚，老和尚给小和尚讲故事。
+    从前有座庙，庙里有个老和尚，老和尚给小和尚讲故事。
+    从前有座庙，庙里有个老和尚，老和尚给小和尚讲故事。</p>
+  </div>
+</body>
+</html>
